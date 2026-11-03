@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Form thank-you pages
+Disallow: /thanks.html
+Disallow: /ai-quick-start/thanks.html
+
+Sitemap: https://trump.tech/sitemap.xml

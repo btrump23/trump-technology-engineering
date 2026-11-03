@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thanks | Trump Technology &amp; Engineering</title>
+  <meta name="description" content="Message received." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="alternate icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .thanks { text-align: center; padding: 5.5rem 0 4.5rem; position: relative; overflow: hidden; }
+    .thanks-stage { position: relative; display: inline-flex; flex-direction: column; align-items: center; min-height: 7.5rem; margin-bottom: .25rem; }
+    .thanks-tt {
+      font-size: clamp(3.4rem, 10vw, 4.6rem); font-weight: 900; line-height: 1;
+      display: inline-block; transform-origin: 50% 70%;
+      animation: tt-dance 2.4s ease-in-out infinite;
+      filter: drop-shadow(0 0 18px rgba(255,20,147,.35));
+      position: relative; z-index: 2;
+    }
+    @keyframes tt-dance {
+      0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+      18% { transform: translateY(-10px) rotate(-6deg) scale(1.04); }
+      36% { transform: translateY(2px) rotate(5deg) scale(1.02); }
+      54% { transform: translateY(-7px) rotate(-3deg) scale(1.05); }
+      72% { transform: translateY(1px) rotate(4deg) scale(1.01); }
+      88% { transform: translateY(-4px) rotate(-2deg) scale(1.03); }
+    }
+    .thanks-hearts {
+      position: absolute; left: 50%; top: 48%;
+      width: min(92px, 28vw); height: min(92px, 28vw);
+      transform: translate(-50%, -50%);
+      opacity: 0; pointer-events: none; z-index: 1;
+      animation: heart-fade 4.8s ease-in-out 0.35s 1 forwards;
+    }
+    .thanks-hearts svg { width: 100%; height: 100%; display: block; }
+    @keyframes heart-fade {
+      0% { opacity: 0; transform: translate(-50%, -40%) scale(.72); }
+      18% { opacity: .95; transform: translate(-50%, -50%) scale(1); }
+      55% { opacity: .9; transform: translate(-50%, -52%) scale(1.06); }
+      100% { opacity: 0; transform: translate(-50%, -58%) scale(1.1); }
+    }
+    .thanks-glitter {
+      position: absolute; inset: -20px -40px auto; height: 160px; width: calc(100% + 80px);
+      left: -40px; pointer-events: none; z-index: 3;
+    }
+    .thanks-glitter span {
+      position: absolute; width: 6px; height: 6px; border-radius: 50%;
+      background: radial-gradient(circle, #fff 0%, #FF1493 55%, transparent 70%);
+      opacity: 0;
+      animation: glitter-pop 4.8s ease-out 0.35s 1 forwards;
+      box-shadow: 0 0 8px rgba(255,20,147,.8);
+    }
+    .thanks-glitter span:nth-child(1) { left: 12%; top: 30%; animation-delay: .4s; }
+    .thanks-glitter span:nth-child(2) { left: 28%; top: 12%; animation-delay: .55s; }
+    .thanks-glitter span:nth-child(3) { left: 45%; top: 8%; animation-delay: .5s; }
+    .thanks-glitter span:nth-child(4) { left: 62%; top: 16%; animation-delay: .7s; }
+    .thanks-glitter span:nth-child(5) { left: 78%; top: 28%; animation-delay: .6s; }
+    .thanks-glitter span:nth-child(6) { left: 18%; top: 58%; animation-delay: .85s; }
+    .thanks-glitter span:nth-child(7) { left: 50%; top: 48%; animation-delay: .75s; }
+    .thanks-glitter span:nth-child(8) { left: 72%; top: 55%; animation-delay: .95s; }
+    .thanks-glitter span:nth-child(9) { left: 36%; top: 70%; animation-delay: 1.05s; }
+    .thanks-glitter span:nth-child(10) { left: 88%; top: 42%; animation-delay: .9s; }
+    @keyframes glitter-pop {
+      0% { opacity: 0; transform: translateY(8px) scale(.4); }
+      25% { opacity: 1; transform: translateY(0) scale(1); }
+      70% { opacity: .85; transform: translateY(-18px) scale(.9); }
+      100% { opacity: 0; transform: translateY(-36px) scale(.3); }
+    }
+    .thanks .cta-row { display: flex; gap: .85rem; justify-content: center; flex-wrap: wrap; margin-top: 1.75rem; }
+    @media (prefers-reduced-motion: reduce) {
+      .thanks-tt, .thanks-hearts, .thanks-glitter span { animation: none !important; }
+      .thanks-hearts { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Trump Technology &amp; Engineering — Home"><span class="brand-mark">TT</span><span class="brand-name">Trump Technology &amp; Engineering</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" />
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#how-we-work">How we work</a></li>
+        <li><a href="ai-quick-start/">AI Quick Start</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-cta"><a href="contact.html">Start a project</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="thanks">
+    <div class="container">
+      <div class="thanks-stage" aria-hidden="true">
+        <div class="thanks-glitter" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="thanks-hearts" aria-hidden="true">
+          <!-- Pink heart only (hands/silhouettes removed) -->
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pink heart">
+            <defs>
+              <linearGradient id="hh" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ff6ec7"/>
+                <stop offset="55%" stop-color="#FF1493"/>
+                <stop offset="100%" stop-color="#ff4db8"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#hh)" d="M50 88C22 68 8 52 8 34c0-12 9-22 21-22 8 0 15 4 21 12 6-8 13-12 21-12 12 0 21 10 21 22 0 18-14 34-42 54z"/>
+          </svg>
+        </div>
+        <div class="big gradient-text thanks-tt">TT</div>
+      </div>
+      <h2 class="section-title" style="margin-top:1rem">Thanks! Your message is <span>on its way</span>.</h2>
+      <p>I’ll get back to you within one business day.</p>
+      <div class="cta-row">
+        <a href="index.html" class="btn">Back to home</a>
+        <a href="index.html#services" class="btn btn-outline">See services</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div><span class="gradient-text" style="font-weight:800">TT</span> Trump Technology &amp; Engineering</div>
+        <div><span class="loc-ico"></span>Based in Melbourne · clients welcome anywhere (remote)</div>
+      </div>
+      <ul class="socials">
+        <li><a href="https://www.linkedin.com/in/bronwyn-trump-5159a620" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="#" aria-label="Instagram (coming soon)">Instagram</a></li>
+      </ul>
+      <div>&copy; <span id="year"></span> Trump Technology &amp; Engineering</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script src="favicon-sparkle.js" defer></script>
+</body>
+</html>
